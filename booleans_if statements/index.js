@@ -114,17 +114,24 @@
 //     alert(`you picked scissors. and computer picked ${computrMove}. ${userMove}`)
 // }
 
+ let score = {
+    wins: 0,
+    losses: 0,
+    ties: 0
+};
+
+function resetScore() {
+    score.wins = 0;
+    score.losses = 0;   
+    score.ties = 0;
+
+}
+
 
 function playGame(userMove) {
     let num = Math.random();
 
     let computerMove = "";
-    
-    let score = {
-    wins: 0,
-    losses: 0,
-    ties: 0
-};
 
     if (num < 1/3) {
         computerMove = 'rock';
