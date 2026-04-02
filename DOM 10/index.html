@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document Object Model</title>
+    <link rel="stylesheet" href="index.css" />
+    
+  </head>
+
+  <body>
+    <p>YouTube Subscribe Button</p>
+
+    <button onclick="subscribe()" class="js-button subscribe-button">
+      Subscribe
+    </button>
+
+    <p>Rcok paper scissors</p>
+
+    <a href="/Rock-paper-Scissors project 10/index.html" target="_blank"
+      >Click here
+    </a>
+
+    <p>Amazon shipping Calculator</p>
+
+    <p>Orders Under$40 =+$ 10 shipping</p>
+
+    <p>Orders Under$50 = Free shipping</p>
+
+    <input
+      placeholder="cost of order"
+      class="js-orderprice cost-input"
+      onkeydown="handleCostkeydown(event)"
+    />
+
+    <button onclick="calculateShipping()" class="js-calculate">Calculate</button>
+
+    <p class="finalresult"></p>
+
+    <script src="index.js"></script>
+  </body>
+</html>
