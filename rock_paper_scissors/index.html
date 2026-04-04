@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Play Rock Paper Scissors against the computer with a beautiful, animated interface. Track your scores and compete!" />
+    <title>Rock Paper Scissors — Battle Arena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Animated background orbs -->
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+
+    <div class="game-container">
+      <!-- Header -->
+      <header class="header">
+        <h1 class="title">
+          <span class="title-icon">⚔️</span>
+          Rock Paper Scissors
+          <span class="title-icon">⚔️</span>
+        </h1>
+        <p class="subtitle">Choose your weapon and battle the computer!</p>
+      </header>
+
+      <!-- Scoreboard -->
+      <section class="scoreboard" id="scoreboard">
+        <div class="score-card score-wins" id="score-wins">
+          <span class="score-label">Wins</span>
+          <span class="score-value" id="wins-count">0</span>
+        </div>
+        <div class="score-card score-ties" id="score-ties">
+          <span class="score-label">Ties</span>
+          <span class="score-value" id="ties-count">0</span>
+        </div>
+        <div class="score-card score-losses" id="score-losses">
+          <span class="score-label">Losses</span>
+          <span class="score-value" id="losses-count">0</span>
+        </div>
+      </section>
+
+      <!-- Battle Arena -->
+      <section class="battle-arena" id="battle-arena">
+        <div class="player-side">
+          <span class="player-label">You</span>
+          <div class="battle-emoji" id="player-emoji">❓</div>
+        </div>
+        <div class="vs-badge" id="vs-badge">VS</div>
+        <div class="player-side">
+          <span class="player-label">Computer</span>
+          <div class="battle-emoji" id="computer-emoji">❓</div>
+        </div>
+      </section>
+
+      <!-- Result Display -->
+      <div class="result-container" id="result-container">
+        <p class="result-text" id="result-text">Pick a move to start!</p>
+      </div>
+
+      <!-- Move Buttons -->
+      <section class="moves-section">
+        <button onclick="playGame('rock')" aria-label="Rock" class="move-button" id="btn-rock">
+          <span class="move-emoji">🪨</span>
+          <span class="move-name">Rock</span>
+        </button>
+        <button onclick="playGame('paper')" aria-label="Paper" class="move-button" id="btn-paper">
+          <span class="move-emoji">📄</span>
+          <span class="move-name">Paper</span>
+        </button>
+        <button onclick="playGame('scissors')" aria-label="Scissors" class="move-button" id="btn-scissors">
+          <span class="move-emoji">✂️</span>
+          <span class="move-name">Scissors</span>
+        </button>
+      </section>
+
+      <!-- Game History -->
+      <section class="history-section" id="history-section">
+        <h2 class="history-title">Recent Matches</h2>
+        <div class="history-list" id="history-list">
+          <p class="history-empty">No matches yet. Start playing!</p>
+        </div>
+      </section>
+
+      <!-- Reset Button -->
+      <button onclick="resetGame()" class="reset-button" id="btn-reset">
+        <span>🔄</span> Reset Game
+      </button>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>Built with 💜 | Rock Paper Scissors Arena</p>
+      </footer>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
