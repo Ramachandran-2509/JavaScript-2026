@@ -1,0 +1,40 @@
+.js-insert1{
+  margin-top: 20px;
+  padding: 10px;
+  margin-right: 25px;
+}
+
+.js-insert2{
+  margin-top: 20px;
+  padding: 9px;
+  margin-right: 25px;
+  width: 150px;
+}
+
+.js-add1{
+  padding: 10px;
+  margin-top: 20px;
+  width: 130px;
+  color: white;
+  background-color: green;
+  font-size: 1rem;
+  font-size: 18px;
+  border:none
+}
+
+.deletelist{
+  padding: 10px;
+  margin-top: 20px;
+  width: 130px;
+  color: white;
+  background-color: rgb(0, 132, 255);
+  font-size: 1rem;
+  font-size: 18px;
+  border:none
+}
+
+.js-showres2{
+  display: grid;
+  grid-template-columns: 200px 150px 150px;
+  
+}
