@@ -14,7 +14,28 @@
 //     score.points = 0;
 // }
 
-  let score = JSON.parse(localStorage.getItem('score'));
+//   let score = JSON.parse(localStorage.getItem('score')) ?? {
+//     wins: 0,
+//     losses: 0,
+//     ties: 0
+// };
+
+
+let score;
+
+try {
+    score = JSON.parse(localStorage.getItem('score')) ?? {
+        wins: 0,
+        losses: 0,
+        ties: 0
+    };
+} catch (e) {
+    score = {
+        wins: 0,
+        losses: 0,
+        ties: 0
+    };
+}
 
 //  JSON.parse(localStorage.getItem('score'));
 
@@ -23,13 +44,14 @@ function resetScore() {
     score.losses = 0;   
     score.ties = 0;
 
+    localStorage.setItem('score', JSON.stringify(score));
 }
 
 
 function playGame(userMove) {
     let num = Math.random();
 
-    let computerMove = "";
+    let computerMove;
 
     if (num < 1/3) {
         computerMove = 'rock';

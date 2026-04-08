@@ -18,7 +18,7 @@
 // console.log(c) // 1020
 
 
-// order summary
+// order summary using string interpolation
 
 // let res= 'Items (' + (1+1) + '): $' + (2095+1899+799+499)/100
 // console.log(res) // Items (2): $53.92
@@ -46,20 +46,20 @@
 
 
 // Task
-let price1 =(2095+2095+799+799)/100
-console.log(`Item ${1+1+1+1}: $${price1}`) // Item 4: $57.88
+// let price1 =(2095+2095+799+799)/100
+// console.log(`Item ${1+1+1+1}: $${price1}`) // Item 4: $57.88
 
 
-let shipping = (499+499)/100
-console.log(`Shipping & handling: $${shipping}`) // Shipping: $9.98
+// let shipping = (499+499)/100
+// console.log(`Shipping & handling: $${shipping}`) // Shipping & handling: $9.98
 
 
-console.log(`Total Before Tax: $${price1+shipping}`)
+// console.log(`Total Before Tax: $${price1+shipping}`)
 
-let p= Math.round((2095+2095+799+799+499+499)*0.1)/100
-console.log(`Estimated Tax ${10}%: $${p}`)
+// let p= Math.round((2095+2095+799+799+499+499)*0.1)/100
+// console.log(`Estimated Tax ${10}%: $${p}`)
 
-console.log(`Order total : $${p+price1+shipping}`) // Order total : $68.86
+// console.log(`Order total : $${p+price1+shipping}`) // Order total : $68.86
 
 // console.log(`Total Cost : $${p+price1+shipping}
 // Thank you, Come Again!

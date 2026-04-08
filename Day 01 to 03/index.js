@@ -1,3 +1,30 @@
+// order of operations
+// 1. ( ) → Parentheses
+// 2. ** → Exponentiation
+// 3. * / % → Multiply, Divide, Modulus
+// 4.  + - → Addition, Subtraction
+// 5. = → Assignment (last)
+
+
+//Example 1 (Without parentheses)
+// let result = 10 + 5 * 2;
+// console.log(result);  // 20 first multiplication is done then addition
+
+//Example 2 (Using parentheses)
+
+// let result1 = (10 + 5) * 2;
+// console.log(result1); // 30 first parentheses is done then multiplication
+
+// Example 3 (Multiple operations)
+// let result = 10 + 5 * 2 ** 2;
+// console.log(result);  // 30 first exponentiation is done then multiplication and then addition
+
+
+
+
+
+
+
 // let k= (2095+1899+799)/100
 // console.log(k)
 

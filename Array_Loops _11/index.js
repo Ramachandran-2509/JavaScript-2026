@@ -48,7 +48,7 @@ function addnewList2() {
   let output = "";
 
   for (let i = 0; i < result2.length; i++) {
-    output += `<p>${result2[i].name} ${result2[i].date} <button class="deletelist" onclick="deleteItem(${i})">Delete</button></p>`;
+    output += `<p>${result2[i].name} ${result2[i].date} <button class="deletelist" onclick="deleteItem(${i})">Delete</button> </p>`;
   
 
     // console.log(output);
@@ -77,3 +77,6 @@ function deleteItem(index) {
   finalResult.innerHTML = output;
 
 } 
+
+
+
