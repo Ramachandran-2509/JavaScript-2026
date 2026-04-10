@@ -1,5 +1,4 @@
-
-
+// first project todo list
 let result = [];
 
 function addnewList1() {
@@ -10,7 +9,8 @@ function addnewList1() {
 
   result.push(res);
 
-  let output = "";
+  let output = "";  
+ 
 
   for (let i = 0; i < result.length; i++) {
     output += `<p>${result[i]}</p>`;
@@ -44,6 +44,7 @@ function addnewList2() {
   let res2 = addElement2.value;
 
   result2.push({ name: res, date: res2 });
+  console.log(result2);
 
   let output = "";
 
@@ -63,7 +64,7 @@ function addnewList2() {
 
 function deleteItem(index) {
   
-  result2.splice(index, 1);
+  console.log(result2.splice(index, 1));  
 
   let finalResult = document.querySelector(".js-showres1");
   
@@ -76,7 +77,41 @@ function deleteItem(index) {
   console.log(output);
   finalResult.innerHTML = output;
 
-} 
+
+}
 
 
+
+
+// function res(){
+
+//   let user=[
+//     {name:"John", age: 30},
+//     {name:"Jane", age: 25},
+//     {name:"Doe", age: 35}
+//   ]
+
+//   for(let i=0; i<user.length; i++){
+//     if(user[i].age>=30){
+//   console.log(user[i].name + " is " + user[i].age + " years old." );
+//     }
+    
+//   }
+
+
+
+// }
+// res()
+
+
+//  let users=[
+//     {name:"John", age: 30},
+//     {name:"Jane", age: 25},
+//     {name:"Doe", age: 35}
+//   ]
+
+
+// users.forEach((user) => {
+//   console.log(user.name, user.age);
+// }) 
 
