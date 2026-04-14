@@ -33,11 +33,7 @@ function clearList() {
 
 
 
-
-
 // final project todo list with date and name
-
-document.querySelector('.js-add1').addEventListener('click', addnewList2);
 let result2 = [];
 function addnewList2() {
   let addElement = document.querySelector(".js-insert1");
@@ -46,20 +42,6 @@ function addnewList2() {
 
   let res = addElement.value;
   let res2 = addElement2.value;
-
-    // ❌ Validation
-    if(!res) {
-    finalResult.innerHTML = "⚠️ Name is required!";
-    return; // stop execution
-  }
-  if (!res2) {
-    finalResult.innerHTML = "⚠️ Date is required!";
-    return; // stop execution
-  }
-
-  // ✅ Clear error if valid
-  finalResult.innerHTML = "";
-
 
   result2.push({ name: res, date: res2 });
   console.log(result2);
@@ -70,12 +52,14 @@ function addnewList2() {
     output += `<p>${item.name} ${item.date} <button class="deletelist" 
     onclick="deleteItem(${result2.indexOf(item)})">Delete</button> </p>`;
   });
+
+
   // for (let i = 0; i < result2.length; i++) {
   //   output += `<p>${result2[i].name} ${result2[i].date} <button class="deletelist" onclick="deleteItem(${i})">Delete</button> </p>`;
   
 
-    // console.log(output);
-
+  //   // console.log(output);
+  // }
 
   finalResult.innerHTML = output;
 
@@ -83,22 +67,6 @@ function addnewList2() {
   addElement2.value = "";
 
 }
-
-
-// add eventlister in delete button to delete the item from the list and update the HTML elements to display the updated list after deletion  
-  console.log(document.querySelectorAll('.js-showres1').forEach((item, index)=>{
-    item.addEventListener('click', function() {
-      deleteItem(index);
-    });
-  }))
-
-
-  //  document.querySelectorAll('.js-showres1').forEach((item, index)=>{
-  //   item.addEventListener('click', 
-  //     deleteItem.bind(null, index)
-  //   );
-  // })
-
 
 function deleteItem(index) {
   
@@ -108,16 +76,11 @@ function deleteItem(index) {
   
   let output = "";
   
-  result2.forEach((item, index) => {
-  output += `
-    <div class="adding">${item.name}</div> 
-    <div class="adding1">${item.date}</div> 
-    <button class="deletelist" data-index="${index}">Delete</button>
-  `;
-});
 
-  
-  console.log(output);
+  // for (let i = 0; i < result2.length; i++) {
+  //   output += `<div class="adding">${result2[i].name}</div> <div class="adding1">${result2[i].date}</div> <button class="deletelist" onclick="deleteItem(${i})">Delete</button>`;
+  // } 
+  // console.log(output);
   finalResult.innerHTML = output;
 
 
@@ -126,5 +89,35 @@ function deleteItem(index) {
 
 
 
+// function res(){
 
+//   let user=[
+//     {name:"John", age: 30},
+//     {name:"Jane", age: 25},
+//     {name:"Doe", age: 35}
+//   ]
+
+//   for(let i=0; i<user.length; i++){
+//     if(user[i].age>=30){
+//   console.log(user[i].name + " is " + user[i].age + " years old." );
+//     }
+    
+//   }
+
+
+
+// }
+// res()
+
+
+//  let users=[
+//     {name:"John", age: 30},
+//     {name:"Jane", age: 25},
+//     {name:"Doe", age: 35}
+//   ]
+
+
+// users.forEach((user) => {
+//   console.log(user.name, user.age);
+// }) 
 

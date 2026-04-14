@@ -127,6 +127,9 @@ function autoPlay (){
 }
 
 
+document.querySelector(".js-rock").addEventListener("click", playGame.bind(null, "rock"));
+document.querySelector(".js-paper").addEventListener("click", playGame.bind(null, "paper"));
+document.querySelector(".js-scissors").addEventListener("click", playGame.bind(null, "scissors"));
 
 // play game function, which is called when the user clicks on one of the buttons (rock, paper, or scissors). It generates a random move for the computer, determines the result of the game, updates the score, and updates the HTML elements to display the result and the moves played.
 function playGame(userMove) {
